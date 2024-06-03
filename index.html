@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeepFind: The Deepfake Detection Extension</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">DeepFind</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Structure</a></li>
+          <li><a href="#projects">Download</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">DeepFind</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <iframe src='https://my.spline.design/untitled-9c83a8f837427a2744a245bab554afd5/' frameborder='0' width='100%' height='100%'></iframe>
+        <script>
+            window.onload = function() {
+                var iframe = document.getElementById('splineFrame');
+                var iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    
+                // Check if the watermark element exists and remove it
+                var watermark = iframeDoc.querySelector('.spline-watermark');
+                if (watermark) {
+                    watermark.parentNode.removeChild(watermark);
+                }
+            };
+        </script>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">What's DeepFind?</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+            
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>About</h3>
+              <p>  This is a personal project combining AI/ML with Software Development to create a useable 
+                Chrome extension for YouTube. <br /><br />When you press the button (located on the YouTube controls 
+                bar) at a certain part of a YouTube video featuring a face, the popup will display whether 
+                the face is a DeepFake or not</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Motivation</h3>
+              <p>A type of synthetic media, deepfakes are 
+                regularly known as videos in which a person’s face or body has been digitally manipulated 
+                to appear as someone else. <br /><br />These deepfakes can be used to spread misinformation, spread 
+                propaganda, or even  blackmail and defame individuals.</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              A couple of pointers:<br />1. This is a research project with an emphasis on gaining ML and UI/UX skills<br />2. This extension was built using platforms accessible to me<br />3. The true accuracy of the prediction is not perfect because of the resources I was 
+                limited to, however, when I can use more powerful processing power, there will be an 
+                update<br />4. This extension was made with fun, so I hope you enjoy it well!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">How was it built?</p>
+      <h1 class="title">Structure</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Backend Development</h2>
+            <div class="article-container">
+              <article>
+               
+                <div>
+                  <h3>Dataset</h3>
+                  <p>Celeb-DF (v2)</p>
+                </div>
+              </article>
+              <article>
+               
+                <div>
+                  <h3>Data Editing</h3>
+                  <p>Face Recognition Cropping</p>
+                </div>
+              </article>
+              <article>
+                
+                <div>
+                  <h3>CNN Used</h3>
+                  <p>Conv2D</p>
+                </div>
+              </article>
+              <article>
+               
+                <div>
+                  <h3>Layers</h3>
+                  <p>3 Dense, 4 CNN, Softmax activation</p>
+                </div>
+              </article>
+              <article>
+                
+                <div>
+                  <h3>Complier</h3>
+                  <p>Binary Cross Entropy</p>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Running</h3>
+                  <p>50 Batches, 40 Epochs</p>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Accuracy</h3>
+                  <p>Around 60%</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+               
+                <div>
+                  <h3>Features</h3>
+                  <p>YouTube Button & Popup</p>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>API</h3>
+                  <p>Fast API</p>
+                </div>
+              </article>
+              <article>
+                <div>
+                  <h3>Logo</h3>
+                  <p>Self-Made</p>
+                </div>
+              </article>
+              <article>
+               
+                <div>
+                  <h3>Languages</h3>
+                  <p>HTML, CSS, Javascript</p>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Chrome Extension for Youtube</p>
+      <h1 class="title">Download</h1>
+      <div class="experience-details-container"> 
+         <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">DeepFind Extension</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/fionavitali/DeepFind.git'"
+              
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Download
+              </button>
+            </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Questions or Concerns?</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:examplemail@gmail.com">fiona.m.vitali@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https:/www.linkedin.com/in/fiona-vitali-033233260">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Structure</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 DeepFind. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
